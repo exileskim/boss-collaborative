@@ -20,6 +20,9 @@
       position: relative;
       overflow: hidden;
       padding-block: var(--space-3xl);
+      background-image:
+        radial-gradient(ellipse at 70% 30%, rgba(232, 87, 42, 0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at 20% 70%, rgba(45, 90, 123, 0.04) 0%, transparent 50%);
     }
 
     /* Geometric decoration — floating shapes */
@@ -68,11 +71,18 @@
         var(--accent-tertiary) 50%,
         var(--accent-secondary) 100%
       );
+      background-size: 200% 200%;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: var(--space-sm);
       user-select: none;
+      animation: error-gradient-shift 6s ease-in-out infinite;
+    }
+
+    @keyframes error-gradient-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
     }
 
     .error-heading {
@@ -114,20 +124,76 @@
       color: var(--text-secondary);
       text-decoration: none;
       transition: color var(--transition-fast);
+      position: relative;
+    }
+
+    .error-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background-color: var(--accent-primary);
+      transition: width var(--transition-base);
     }
 
     .error-nav a:hover {
       color: var(--accent-primary);
     }
 
-    /* Decorative diamond shape */
-    .error-diamond {
-      width: 12px;
-      height: 12px;
+    .error-nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Three-diamond decorative separator */
+    .error-diamonds {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-xs);
+      margin: var(--space-lg) auto var(--space-xs);
+    }
+
+    .error-diamonds__dot {
+      width: 8px;
+      height: 8px;
       background-color: var(--accent-tertiary);
       transform: rotate(45deg);
-      margin: var(--space-lg) auto var(--space-xs);
-      opacity: 0.5;
+      opacity: 0.35;
+    }
+
+    .error-diamonds__dot:nth-child(2) {
+      width: 10px;
+      height: 10px;
+      background-color: var(--accent-primary);
+      opacity: 0.45;
+    }
+
+    /* Extra geometric: rotated square mid-left */
+    .error-geo-square {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border: 2px solid var(--accent-secondary);
+      opacity: 0.1;
+      transform: rotate(35deg);
+      bottom: 15%;
+      left: 8%;
+      pointer-events: none;
+    }
+
+    /* Extra geometric: small dot grid upper-left */
+    .error-geo-dots {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      top: 15%;
+      left: 12%;
+      opacity: 0.08;
+      background-image: radial-gradient(circle, var(--text-primary) 1.5px, transparent 1.5px);
+      background-size: 14px 14px;
+      pointer-events: none;
     }
 
     @media (min-width: 768px) {
@@ -148,6 +214,25 @@
       .error-links {
         flex-direction: row;
         justify-content: center;
+      }
+
+      .error-geo-square {
+        width: 180px;
+        height: 180px;
+        left: 10%;
+      }
+
+      .error-geo-dots {
+        width: 120px;
+        height: 120px;
+        top: 12%;
+        left: 15%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .error-code {
+        animation: none;
       }
     }
   </style>
@@ -196,6 +281,8 @@
   <!-- 404 Content -->
   <main>
     <section class="error-section">
+      <div class="error-geo-dots" aria-hidden="true"></div>
+      <div class="error-geo-square" aria-hidden="true"></div>
       <div class="error-content" data-animate="fade-in">
         <div class="error-code">404</div>
         <h1 class="error-heading">Page Not Found</h1>
@@ -207,7 +294,11 @@
           <a href="index.html" class="btn btn--primary btn--large">Return Home</a>
           <a href="contact.html" class="btn btn--secondary">Get in Touch</a>
         </div>
-        <div class="error-diamond"></div>
+        <div class="error-diamonds" aria-hidden="true">
+          <span class="error-diamonds__dot"></span>
+          <span class="error-diamonds__dot"></span>
+          <span class="error-diamonds__dot"></span>
+        </div>
         <nav class="error-nav" aria-label="Quick links">
           <a href="services.html">Services</a>
           <a href="case-studies.html">Case Studies</a>

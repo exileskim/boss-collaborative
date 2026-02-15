@@ -234,6 +234,23 @@ body.nav-open {
   color: rgba(250, 250, 248, 0.75);
   padding-top: var(--space-3xl);
   padding-bottom: var(--space-lg);
+  position: relative;
+}
+
+/* Decorative top border: three-color gradient line as visual bridge */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    var(--accent-primary) 0%,
+    var(--accent-tertiary) 40%,
+    var(--accent-secondary) 100%
+  );
 }
 
 .site-footer h4 {
@@ -308,6 +325,20 @@ body.nav-open {
   gap: var(--space-sm);
   font-size: var(--fs-small);
   color: rgba(250, 250, 248, 0.4);
+  position: relative;
+}
+
+/* Small centered diamond on the border between grid and bottom */
+.footer__bottom::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  background-color: var(--accent-tertiary);
+  opacity: 0.5;
 }
 
 
@@ -563,25 +594,40 @@ body.nav-open {
   color: var(--text-primary);
   border-left: 4px solid var(--accent-primary);
   padding-left: var(--space-lg);
+  padding-block: var(--space-sm);
   margin-block: var(--space-lg);
+  background: linear-gradient(to right, rgba(232, 87, 42, 0.04), transparent 70%);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
 }
 
 .pull-quote::before {
   content: '\201C';
   position: absolute;
-  top: -0.6em;
+  top: -0.4em;
   left: var(--space-sm);
   font-family: var(--font-accent);
-  font-size: 4rem;
+  font-size: 5rem;
   line-height: 1;
   color: var(--accent-tertiary);
-  opacity: 0.5;
+  opacity: 0.35;
   pointer-events: none;
+}
+
+/* Small diamond accent after the quote text */
+.pull-quote::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-tertiary);
+  transform: rotate(45deg);
+  opacity: 0.4;
+  margin-top: var(--space-sm);
 }
 
 .pull-quote cite {
   display: block;
-  margin-top: var(--space-sm);
+  margin-top: var(--space-xs);
   font-family: var(--font-body);
   font-style: normal;
   font-size: var(--fs-small);
@@ -601,6 +647,30 @@ body.nav-open {
 .section-heading {
   font-size: var(--fs-h2);
   margin-bottom: var(--space-sm);
+  position: relative;
+}
+
+/* Thin accent line before section headings for visual anchor */
+.section-heading::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(to right, var(--accent-primary), var(--accent-tertiary));
+  border-radius: 2px;
+  margin-bottom: var(--space-sm);
+}
+
+/* Centered variant for text-center sections */
+.text-center .section-heading::before,
+.section-heading.text-center::before {
+  margin-inline: auto;
+}
+
+/* On dark/accent backgrounds, lighten the line */
+.section--dark .section-heading::before,
+.section--accent .section-heading::before {
+  background: linear-gradient(to right, var(--accent-tertiary), rgba(250, 250, 248, 0.4));
 }
 
 .section-subheading {
@@ -613,6 +683,152 @@ body.nav-open {
 .section-heading + .section-subheading {
   margin-top: var(--space-xs);
   margin-bottom: var(--space-2xl);
+}
+
+
+/* ===========================================
+   SECTION DIVIDERS
+   =========================================== */
+
+/* Diamond separator — use between sections for visual flow */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding-block: var(--space-xs);
+  pointer-events: none;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(to right, transparent, var(--neutral-300));
+}
+
+.section-divider::after {
+  background: linear-gradient(to left, transparent, var(--neutral-300));
+}
+
+.section-divider__diamond {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-tertiary);
+  transform: rotate(45deg);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+
+/* ===========================================
+   EYEBROW LABELS
+   =========================================== */
+
+.section-eyebrow {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.section-eyebrow--secondary {
+  color: var(--accent-secondary);
+}
+
+.section-eyebrow--tertiary {
+  color: var(--accent-tertiary);
+}
+
+/* When eyebrow is present, the eyebrow replaces the ::before line */
+.section-eyebrow + .section-heading::before {
+  display: none;
+}
+
+
+/* ===========================================
+   HEADING ACCENT WORDS
+   =========================================== */
+
+.heading-accent {
+  color: var(--accent-primary);
+  font-family: var(--font-accent);
+  font-style: italic;
+}
+
+.heading-accent--secondary {
+  color: var(--accent-secondary);
+}
+
+
+/* ===========================================
+   ANGLED SECTION DIVIDERS
+   =========================================== */
+
+.section-angle {
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  pointer-events: none;
+  margin-top: -1px;
+}
+
+.section-angle svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Variant that sits flush with the section above */
+.section-angle--flush {
+  margin-top: -50px;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ===========================================
+   DECORATIVE BACKGROUND ELEMENTS
+   =========================================== */
+
+/* Dot grid cluster — position with inline styles or page-specific CSS */
+.deco-dots {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.10;
+  background-image: radial-gradient(circle, var(--accent-primary) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+}
+
+.deco-dots--secondary {
+  background-image: radial-gradient(circle, var(--accent-secondary) 1.5px, transparent 1.5px);
+}
+
+/* Soft circle glow */
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Floating ring outline */
+.deco-ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  border: 2px solid var(--accent-secondary);
+  opacity: 0.12;
 }
 
 

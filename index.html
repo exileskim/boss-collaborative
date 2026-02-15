@@ -153,9 +153,12 @@
     </section>
 
     <!-- ==================== SERVICES PREVIEW ==================== -->
-    <section class="section section--alt" aria-labelledby="services-heading">
+    <section class="section section--alt services-section" aria-labelledby="services-heading">
+      <!-- Decorative dot cluster -->
+      <div class="deco-dots services-section__dots" aria-hidden="true"></div>
       <div class="container">
-        <h2 class="section-heading" id="services-heading" data-animate="fade-up">What We Do</h2>
+        <span class="section-eyebrow" data-animate="fade-up">Our Services</span>
+        <h2 class="section-heading" id="services-heading" data-animate="fade-up">What We <span class="heading-accent">Do</span></h2>
         <p class="section-subheading" data-animate="fade-up">Tailored facilitation and consulting for organizations ready to move from complexity to clarity</p>
 
         <div class="grid grid--3col services-grid" data-animate="fade-up" data-animate-stagger>
@@ -216,6 +219,13 @@
       </div>
     </section>
 
+    <!-- Angled divider: services (gray) to case study (dark) -->
+    <div class="section-angle" aria-hidden="true">
+      <svg viewBox="0 0 1440 50" preserveAspectRatio="none" fill="var(--bg-dark)">
+        <polygon points="0,50 1440,0 1440,50"/>
+      </svg>
+    </div>
+
     <!-- ==================== FEATURED CASE STUDY ==================== -->
     <section class="section section--lg section--dark featured-case-study" data-animate="fade-in" aria-labelledby="featured-study-heading">
       <div class="container">
@@ -236,6 +246,13 @@
         </div>
       </div>
     </section>
+
+    <!-- Angled divider: case study (dark) to about teaser (white) -->
+    <div class="section-angle" aria-hidden="true">
+      <svg viewBox="0 0 1440 50" preserveAspectRatio="none" fill="var(--bg-primary)">
+        <polygon points="0,0 1440,50 0,50"/>
+      </svg>
+    </div>
 
     <!-- ==================== ABOUT TEASER ==================== -->
     <section class="section" aria-labelledby="about-teaser-heading">
@@ -261,8 +278,10 @@
 
     <!-- ==================== CTA ==================== -->
     <section class="section section--lg section--accent home-cta" aria-labelledby="home-cta-heading">
+      <!-- Decorative ring -->
+      <div class="deco-ring home-cta__ring" aria-hidden="true"></div>
       <div class="container text-center">
-        <h2 class="home-cta__heading" id="home-cta-heading" data-animate="fade-up">Ready to Tackle Your Next Challenge?</h2>
+        <h2 class="home-cta__heading" id="home-cta-heading" data-animate="fade-up">Ready to Tackle Your Next <span class="heading-accent" style="color: var(--accent-tertiary);">Challenge?</span></h2>
         <p class="home-cta__subtitle" data-animate="fade-up">Schedule a free 20-minute discovery call and let's explore how collaborative facilitation can move your team forward.</p>
         <div data-animate="fade-up">
           <a href="contact.html" class="btn btn--large home-cta__btn">
