@@ -18,13 +18,16 @@
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap"></noscript>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/pages-home.css">
 
   <!-- Scripts -->
   <script src="js/nav.js" defer></script>
@@ -128,26 +131,26 @@
       <div class="logo-bar">
         <div class="logo-bar__track">
           <!-- First set of logos -->
-          <span class="logo-bar__item"><img src="assets/logos/usf.png" alt="University of South Florida" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item"><img src="assets/logos/nasa.png" alt="NASA" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item"><img src="assets/logos/nih.png" alt="National Institutes of Health" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item"><img src="assets/logos/nsf.png" alt="National Science Foundation" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item"><img src="assets/logos/dali-museum.png" alt="The Dali Museum" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item"><img src="assets/logos/st-petersburg.png" alt="City of St. Petersburg" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item"><img src="assets/logos/spc.png" alt="St. Petersburg College" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item"><img src="assets/logos/bloomin-brands.png" alt="Bloomin' Brands" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item"><img src="assets/logos/inova.png" alt="Inova" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item"><img src="assets/logos/usf.webp" alt="University of South Florida" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item"><img src="assets/logos/nasa.webp" alt="NASA" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item"><img src="assets/logos/nih.webp" alt="National Institutes of Health" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item"><img src="assets/logos/nsf.webp" alt="National Science Foundation" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item"><img src="assets/logos/dali-museum.webp" alt="The Dali Museum" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item"><img src="assets/logos/st-petersburg.webp" alt="City of St. Petersburg" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item"><img src="assets/logos/spc.webp" alt="St. Petersburg College" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item"><img src="assets/logos/bloomin-brands.webp" alt="Bloomin' Brands" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item"><img src="assets/logos/inova.webp" alt="Inova" width="120" height="48" loading="lazy"></span>
           <span class="logo-bar__item"><img src="assets/logos/sumo.svg" alt="SUMO" width="120" height="48" loading="lazy"></span>
           <!-- Duplicate set for seamless infinite scroll -->
-          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/usf.png" alt="" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/nasa.png" alt="" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/nih.png" alt="" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/nsf.png" alt="" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/dali-museum.png" alt="" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/st-petersburg.png" alt="" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/spc.png" alt="" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/bloomin-brands.png" alt="" width="120" height="48" loading="lazy"></span>
-          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/inova.png" alt="" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/usf.webp" alt="" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/nasa.webp" alt="" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/nih.webp" alt="" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/nsf.webp" alt="" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/dali-museum.webp" alt="" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/st-petersburg.webp" alt="" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/spc.webp" alt="" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/bloomin-brands.webp" alt="" width="120" height="48" loading="lazy"></span>
+          <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/inova.webp" alt="" width="120" height="48" loading="lazy"></span>
           <span class="logo-bar__item" aria-hidden="true"><img src="assets/logos/sumo.svg" alt="" width="120" height="48" loading="lazy"></span>
         </div>
       </div>
