@@ -238,12 +238,11 @@ body.nav-open {
 
 .site-footer h4 {
   color: var(--text-light);
-  font-size: var(--fs-body);
+  font-size: var(--fs-small);
   font-weight: var(--fw-semibold);
   margin-bottom: var(--space-md);
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  font-size: var(--fs-small);
 }
 
 .footer__grid {
@@ -404,7 +403,10 @@ body.nav-open {
   border-radius: var(--radius-md);
   padding: var(--space-lg);
   box-shadow: var(--shadow-sm);
-  transition: box-shadow var(--transition-base), transform var(--transition-base);
+  border-left: 3px solid transparent;
+  transition: box-shadow var(--transition-base),
+              transform var(--transition-base),
+              border-color var(--transition-base);
   display: flex;
   flex-direction: column;
 }
@@ -412,6 +414,7 @@ body.nav-open {
 .card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+  border-left-color: var(--accent-primary);
 }
 
 .card__tag {
@@ -529,7 +532,7 @@ body.nav-open {
   color: var(--text-primary);
   white-space: nowrap;
   filter: grayscale(1);
-  opacity: 0.45;
+  opacity: 0.55;
   transition: filter var(--transition-base), opacity var(--transition-base);
   user-select: none;
   letter-spacing: -0.01em;

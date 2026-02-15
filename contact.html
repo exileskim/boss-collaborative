@@ -24,9 +24,9 @@
 <body class="page-contact">
 
   <!-- Navigation -->
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="container">
-      <a href="index.html" class="site-logo">Boss <span>Collaborative</span></a>
+      <a href="index.html" class="site-logo" aria-label="Boss Collaborative — Home">Boss <span>Collaborative</span></a>
       <nav class="site-nav" aria-label="Main navigation">
         <ul class="site-nav__list">
           <li><a href="index.html" class="nav-link">Home</a></li>
@@ -37,15 +37,15 @@
           <li><a href="contact.html" class="nav-link nav-link--active">Contact</a></li>
         </ul>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
         <span class="nav-toggle__line"></span>
         <span class="nav-toggle__line"></span>
         <span class="nav-toggle__line"></span>
       </button>
     </div>
   </header>
-  <div class="mobile-nav__backdrop"></div>
-  <nav class="mobile-nav" aria-label="Mobile navigation">
+  <div class="mobile-nav__backdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
     <ul class="mobile-nav__list">
       <li><a href="index.html" class="mobile-nav__link">Home</a></li>
       <li><a href="about.html" class="mobile-nav__link">About</a></li>
@@ -67,6 +67,7 @@
           <h1 class="contact-hero__title">Let's Start a Conversation</h1>
           <p class="contact-hero__subtitle text-lg">Whether you have a specific challenge in mind or just want to explore how collaboration could help, we'd love to hear from you.</p>
         </div>
+        <div class="contact-hero__accent" aria-hidden="true"></div>
       </div>
     </section>
 
@@ -180,10 +181,10 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="index.html" class="site-logo">Boss <span>Collaborative</span></a>
-          <p>Creative collaboration for complex challenges. Strategic facilitation and workshop design for teams navigating complexity.</p>
+          <p>Designing and facilitating collaborative experiences that help teams navigate complexity, align strategy, and co-create solutions.</p>
         </div>
         <div class="footer__nav">
-          <h4>Pages</h4>
+          <h4>Navigate</h4>
           <ul>
             <li><a href="about.html" class="footer__link">About</a></li>
             <li><a href="services.html" class="footer__link">Services</a></li>
@@ -194,8 +195,14 @@
         </div>
         <div class="footer__contact">
           <h4>Get in Touch</h4>
-          <a href="mailto:annemarie@bosscollaborative.com">annemarie@bosscollaborative.com</a>
-          <a href="https://linkedin.com/in/annemarieboss1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:annemarie@bosscollaborative.com">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            annemarie@bosscollaborative.com
+          </a>
+          <a href="https://www.linkedin.com/in/annemarieboss1" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
         </div>
       </div>
       <div class="footer__bottom">
