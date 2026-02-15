@@ -11,6 +11,13 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.bosscollaborative.com/contact.html">
   <meta property="og:site_name" content="Boss Collaborative">
+  <meta property="og:locale" content="en_US">
+  <link rel="canonical" href="https://www.bosscollaborative.com/contact.html">
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
@@ -24,7 +31,7 @@
 <body class="page-contact">
 
   <!-- Navigation -->
-  <header class="site-header" role="banner">
+  <header class="site-header">
     <div class="container">
       <a href="index.html" class="site-logo" aria-label="Boss Collaborative — Home">Boss <span>Collaborative</span></a>
       <nav class="site-nav" aria-label="Main navigation">
@@ -60,11 +67,11 @@
   <main>
 
     <!-- Hero -->
-    <section class="contact-hero section">
+    <section class="contact-hero section" aria-labelledby="contact-hero-heading">
       <div class="container">
         <div class="contact-hero__inner" data-animate="fade-in">
           <p class="contact-hero__label">Contact</p>
-          <h1 class="contact-hero__title">Let's Start a Conversation</h1>
+          <h1 class="contact-hero__title" id="contact-hero-heading">Let's Start a Conversation</h1>
           <p class="contact-hero__subtitle text-lg">Whether you have a specific challenge in mind or just want to explore how collaboration could help, we'd love to hear from you.</p>
         </div>
         <div class="contact-hero__accent" aria-hidden="true"></div>
@@ -77,13 +84,14 @@
     </div>
 
     <!-- Contact Content: Form + Info -->
-    <section class="contact-content section section--sm">
+    <section class="contact-content section section--sm" aria-labelledby="contact-form-heading">
       <div class="container">
         <div class="contact-grid">
 
           <!-- Left Column: Form -->
           <div class="contact-form-wrap" data-animate="fade-up">
-            <h2 class="contact-form__heading">Send a Message</h2>
+            <h2 class="contact-form__heading" id="contact-form-heading">Send a Message</h2>
+            <!-- TODO: Replace YOUR_ID with actual Formspree endpoint -->
             <form class="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST">
               <input type="hidden" name="_subject" value="New inquiry from Boss Collaborative website">
 
@@ -164,7 +172,8 @@
               <p class="contact-info__desc">Skip the form. Schedule a free 20-minute discovery call and let's discuss your challenge directly.</p>
               <div class="contact-calendly">
                 <!-- Calendly inline widget -->
-                <div class="calendly-inline-widget" data-url="https://calendly.com/annemarie-bosscollaborative/discovery" style="min-width:280px;min-height:630px;"></div>
+                <!-- TODO: Verify this is the correct Calendly URL -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/annemarie-bosscollaborative/discovery"></div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                 <!-- Fallback link if widget doesn't load -->
                 <noscript>
@@ -189,7 +198,7 @@
           <p>Designing and facilitating collaborative experiences that help teams navigate complexity, align strategy, and co-create solutions.</p>
         </div>
         <div class="footer__nav">
-          <h4>Navigate</h4>
+          <h3>Navigate</h3>
           <ul>
             <li><a href="about.html" class="footer__link">About</a></li>
             <li><a href="services.html" class="footer__link">Services</a></li>
@@ -199,7 +208,7 @@
           </ul>
         </div>
         <div class="footer__contact">
-          <h4>Get in Touch</h4>
+          <h3>Get in Touch</h3>
           <a href="mailto:annemarie@bosscollaborative.com">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             annemarie@bosscollaborative.com
@@ -220,15 +229,15 @@
   <!-- Contact Form Submission Handler -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      var form = document.querySelector('.contact-form');
+      const form = document.querySelector('.contact-form');
       if (!form) return;
 
       form.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        var submitBtn = form.querySelector('button[type="submit"]');
-        var successMsg = form.querySelector('.contact-form__success');
-        var originalText = submitBtn.innerHTML;
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const successMsg = form.querySelector('.contact-form__success');
+        const originalText = submitBtn.innerHTML;
 
         // Disable button to prevent double-submit
         submitBtn.disabled = true;

@@ -6,6 +6,11 @@
   <title>Page Not Found — Boss Collaborative</title>
   <meta name="description" content="The page you're looking for doesn't exist or has been moved. Let's get you back on track.">
   <meta name="robots" content="noindex, nofollow">
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -239,10 +244,10 @@
   <script src="js/nav.js" defer></script>
   <script src="js/animations.js" defer></script>
 </head>
-<body>
+<body class="page-404">
 
   <!-- Navigation -->
-  <header class="site-header" role="banner">
+  <header class="site-header">
     <div class="container">
       <a href="index.html" class="site-logo" aria-label="Boss Collaborative — Home">Boss <span>Collaborative</span></a>
       <nav class="site-nav" aria-label="Main navigation">
@@ -280,7 +285,7 @@
 
   <!-- 404 Content -->
   <main>
-    <section class="error-section">
+    <section class="error-section" aria-label="Error page">
       <div class="error-geo-dots" aria-hidden="true"></div>
       <div class="error-geo-square" aria-hidden="true"></div>
       <div class="error-content" data-animate="fade-in">
@@ -318,7 +323,7 @@
           <p>Designing and facilitating collaborative experiences that help teams navigate complexity, align strategy, and co-create solutions.</p>
         </div>
         <div class="footer__nav">
-          <h4>Navigate</h4>
+          <h3>Navigate</h3>
           <ul>
             <li><a href="about.html" class="footer__link">About</a></li>
             <li><a href="services.html" class="footer__link">Services</a></li>
@@ -328,7 +333,7 @@
           </ul>
         </div>
         <div class="footer__contact">
-          <h4>Get in Touch</h4>
+          <h3>Get in Touch</h3>
           <a href="mailto:annemarie@bosscollaborative.com">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             annemarie@bosscollaborative.com

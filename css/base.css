@@ -115,22 +115,6 @@ p:last-child {
   line-height: 1.7;
 }
 
-.text-sm {
-  font-size: var(--fs-small);
-}
-
-.text-accent {
-  font-family: var(--font-accent);
-}
-
-.text-secondary {
-  color: var(--text-secondary);
-}
-
-.text-light {
-  color: var(--text-light);
-}
-
 strong {
   font-weight: var(--fw-semibold);
 }

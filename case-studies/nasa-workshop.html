@@ -12,6 +12,11 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.bosscollaborative.com/case-studies/nasa-workshop.html">
   <meta property="og:site_name" content="Boss Collaborative">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- CSS -->
   <link rel="stylesheet" href="../css/variables.css">
@@ -27,7 +32,7 @@
 <body class="page-case-studies">
 
   <!-- ============ HEADER ============ -->
-  <header class="site-header" role="banner">
+  <header class="site-header">
     <div class="container">
       <a href="../index.html" class="site-logo" aria-label="Boss Collaborative — Home">Boss <span>Collaborative</span></a>
       <nav class="site-nav" aria-label="Main navigation">
@@ -35,7 +40,7 @@
           <li><a href="../index.html" class="nav-link">Home</a></li>
           <li><a href="../about.html" class="nav-link">About</a></li>
           <li><a href="../services.html" class="nav-link">Services</a></li>
-          <li><a href="../case-studies.html" class="nav-link nav-link--active">Case Studies</a></li>
+          <li><a href="../case-studies.html" class="nav-link nav-link--active" aria-current="page">Case Studies</a></li>
           <li><a href="../blog.html" class="nav-link">Blog</a></li>
           <li><a href="../contact.html" class="nav-link">Contact</a></li>
         </ul>
@@ -53,7 +58,7 @@
       <li><a href="../index.html" class="mobile-nav__link">Home</a></li>
       <li><a href="../about.html" class="mobile-nav__link">About</a></li>
       <li><a href="../services.html" class="mobile-nav__link">Services</a></li>
-      <li><a href="../case-studies.html" class="mobile-nav__link mobile-nav__link--active">Case Studies</a></li>
+      <li><a href="../case-studies.html" class="mobile-nav__link mobile-nav__link--active" aria-current="page">Case Studies</a></li>
       <li><a href="../blog.html" class="mobile-nav__link">Blog</a></li>
       <li><a href="../contact.html" class="mobile-nav__link">Contact</a></li>
     </ul>
@@ -62,33 +67,34 @@
 
   <main>
 
+    <!-- PLACEHOLDER CONTENT: All case study content (stats, quotes, narratives, outcomes) is AI-fabricated and needs replacement with real data -->
     <!-- ============ HERO ============ -->
-    <section class="cs-detail-hero">
+    <section class="cs-detail-hero" aria-labelledby="cs-detail-title">
       <div class="container cs-detail-hero__container" data-animate="fade-up">
-        <a href="../case-studies.html" class="cs-detail-hero__back">&larr; Back to Case Studies</a>
+        <a href="../case-studies.html" class="cs-detail-hero__back" aria-label="Back to Case Studies">&larr; Back to Case Studies</a>
         <span class="card__tag">Workshop Facilitation</span>
-        <h1 class="cs-detail-hero__title">NASA: Aligning 500+ Scientists Around a Shared Mission</h1>
+        <h1 class="cs-detail-hero__title" id="cs-detail-title">NASA: Aligning 500+ Scientists Around a Shared Mission</h1>
         <p class="cs-detail-hero__subtitle">A multi-day collaborative workshop that transformed siloed research groups into a unified scientific community with shared frameworks and lasting cross-disciplinary partnerships.</p>
       </div>
     </section>
 
     <!-- ============ KEY STATS ============ -->
-    <section class="section section--sm">
+    <section class="section section--sm" aria-label="Key results">
       <div class="container">
         <div class="grid grid--4col case-study__stats" data-animate="fade-up">
-          <div class="case-study__stat">
+          <div class="case-study__stat" aria-label="500+ Participants">
             <span class="case-study__stat-number">500+</span>
             <span class="case-study__stat-label">Participants</span>
           </div>
-          <div class="case-study__stat">
+          <div class="case-study__stat" aria-label="3 Days">
             <span class="case-study__stat-number">3</span>
             <span class="case-study__stat-label">Days</span>
           </div>
-          <div class="case-study__stat">
+          <div class="case-study__stat" aria-label="12 Research Disciplines">
             <span class="case-study__stat-number">12</span>
             <span class="case-study__stat-label">Research Disciplines</span>
           </div>
-          <div class="case-study__stat">
+          <div class="case-study__stat" aria-label="8 Collaborative Frameworks Created">
             <span class="case-study__stat-number">8</span>
             <span class="case-study__stat-label">Collaborative Frameworks Created</span>
           </div>
@@ -130,7 +136,7 @@
     </section>
 
     <!-- ============ NEXT/PREV NAVIGATION ============ -->
-    <section class="cs-nav">
+    <section class="cs-nav" aria-label="More case studies">
       <div class="container">
         <div class="cs-nav__grid">
           <a href="city-stpete.html" class="cs-nav__item">
@@ -148,9 +154,9 @@
     </section>
 
     <!-- ============ CTA ============ -->
-    <section class="section section--accent" data-animate="fade-in">
+    <section class="section section--accent" data-animate="fade-in" aria-labelledby="cs-cta-heading">
       <div class="container text-center">
-        <h2 class="section-heading">Facing a Similar Challenge?</h2>
+        <h2 class="section-heading" id="cs-cta-heading">Facing a Similar Challenge?</h2>
         <p class="section-subheading cta-subheading">Whether you're aligning 50 people or 500, we design facilitation experiences that turn complexity into collaboration.</p>
         <div class="flex-center flex-wrap cta-actions">
           <a href="../contact.html" class="btn btn--light btn--large">Book a Discovery Call</a>
@@ -170,7 +176,7 @@
           <p>Designing and facilitating collaborative experiences that help teams navigate complexity, align strategy, and co-create solutions.</p>
         </div>
         <div class="footer__nav">
-          <h4>Navigate</h4>
+          <h3>Navigate</h3>
           <ul>
             <li><a href="../about.html" class="footer__link">About</a></li>
             <li><a href="../services.html" class="footer__link">Services</a></li>
@@ -180,7 +186,7 @@
           </ul>
         </div>
         <div class="footer__contact">
-          <h4>Get in Touch</h4>
+          <h3>Get in Touch</h3>
           <a href="mailto:annemarie@bosscollaborative.com">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             annemarie@bosscollaborative.com

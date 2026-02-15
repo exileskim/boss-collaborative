@@ -31,11 +31,6 @@
   padding-block: var(--space-4xl);
 }
 
-.section--full-bleed {
-  padding-block: var(--space-3xl);
-  padding-inline: var(--container-padding);
-}
-
 .section--dark {
   background-color: var(--bg-dark);
   color: var(--text-light);
@@ -135,21 +130,11 @@
   grid-template-columns: 1fr;
 }
 
-.grid--asymmetric {
-  grid-template-columns: 1fr;
-}
-
 /* ---------- Flexbox Utilities ---------- */
 .flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.flex-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .flex-wrap {
@@ -158,20 +143,8 @@
   gap: var(--space-sm);
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-/* ---------- Spacing Utilities ---------- */
-.gap-sm { gap: var(--space-sm); }
-.gap-md { gap: var(--space-md); }
-.gap-lg { gap: var(--space-lg); }
-.gap-xl { gap: var(--space-xl); }
-
 /* ---------- Text Alignment ---------- */
 .text-center { text-align: center; }
-.text-left { text-align: left; }
 
 /* ---------- Accessibility ---------- */
 .visually-hidden {
@@ -190,14 +163,6 @@
    TABLET — 768px+
    ============================================ */
 @media (min-width: 768px) {
-  .section {
-    padding-block: var(--space-3xl);
-  }
-
-  .section--lg {
-    padding-block: var(--space-4xl);
-  }
-
   .grid--2col {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -208,10 +173,6 @@
 
   .grid--4col {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid--asymmetric {
-    grid-template-columns: 1.2fr 0.8fr;
   }
 }
 

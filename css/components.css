@@ -430,7 +430,7 @@ body.nav-open {
    =========================================== */
 
 .card {
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: var(--radius-md);
   padding: var(--space-lg);
   box-shadow: var(--shadow-sm);
@@ -765,6 +765,10 @@ body.nav-open {
   color: var(--accent-secondary);
 }
 
+.heading-accent--tertiary {
+  color: var(--accent-tertiary);
+}
+
 
 /* ===========================================
    ANGLED SECTION DIVIDERS
@@ -787,13 +791,6 @@ body.nav-open {
   display: block;
 }
 
-/* Variant that sits flush with the section above */
-.section-angle--flush {
-  margin-top: -50px;
-  position: relative;
-  z-index: 1;
-}
-
 
 /* ===========================================
    DECORATIVE BACKGROUND ELEMENTS
@@ -807,10 +804,6 @@ body.nav-open {
   opacity: 0.10;
   background-image: radial-gradient(circle, var(--accent-primary) 1.5px, transparent 1.5px);
   background-size: 14px 14px;
-}
-
-.deco-dots--secondary {
-  background-image: radial-gradient(circle, var(--accent-secondary) 1.5px, transparent 1.5px);
 }
 
 /* Soft circle glow */
