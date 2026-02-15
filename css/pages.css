@@ -10,6 +10,225 @@
 /* === HOME PAGE === */
 /* Owned by: homepage teammate */
 
+/* ---------- Hero ---------- */
+.page-home .hero {
+  position: relative;
+  min-height: calc(100vh - 72px);
+  min-height: calc(100dvh - 72px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+}
+
+.page-home .hero__container {
+  position: relative;
+  z-index: 2;
+  padding-block: var(--space-3xl);
+}
+
+.page-home .hero__content {
+  max-width: 720px;
+}
+
+.page-home .hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-bold);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.page-home .hero__title-accent {
+  color: var(--accent-primary);
+  position: relative;
+  display: inline-block;
+}
+
+/* Subtle underline decoration on the accent word */
+.page-home .hero__title-accent::after {
+  content: '';
+  position: absolute;
+  bottom: 0.04em;
+  left: -0.05em;
+  right: -0.05em;
+  height: 0.12em;
+  background-color: var(--accent-primary);
+  opacity: 0.18;
+  border-radius: 2px;
+}
+
+.page-home .hero__subtitle {
+  font-size: var(--fs-body-lg);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 540px;
+  margin-bottom: var(--space-xl);
+}
+
+.page-home .hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+/* ---------- Geometric Decorations ---------- */
+.page-home .hero__geo {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Large circle — top right, burnt orange */
+.page-home .hero__geo--circle-1 {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-primary);
+  opacity: 0.09;
+  top: -60px;
+  right: -80px;
+}
+
+/* Rotated square — mid right, teal */
+.page-home .hero__geo--square-1 {
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--accent-secondary);
+  opacity: 0.1;
+  transform: rotate(35deg);
+  top: 40%;
+  right: 12%;
+}
+
+/* Small filled circle — lower right, gold */
+.page-home .hero__geo--circle-2 {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: var(--accent-tertiary);
+  opacity: 0.12;
+  bottom: 18%;
+  right: 28%;
+}
+
+/* Dot grid pattern — upper right area */
+.page-home .hero__geo--dots {
+  width: 120px;
+  height: 120px;
+  top: 22%;
+  right: 30%;
+  opacity: 0.1;
+  background-image:
+    radial-gradient(circle, var(--text-primary) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+/* Diagonal line — crossing behind content area */
+.page-home .hero__geo--line-1 {
+  width: 300px;
+  height: 2px;
+  background-color: var(--accent-primary);
+  opacity: 0.08;
+  transform: rotate(-25deg);
+  bottom: 28%;
+  right: 5%;
+}
+
+/* ---------- Hero Responsive ---------- */
+@media (min-width: 768px) {
+  .page-home .hero {
+    min-height: calc(100vh - 80px);
+    min-height: calc(100dvh - 80px);
+  }
+
+  .page-home .hero__container {
+    padding-block: var(--space-4xl);
+  }
+
+  .page-home .hero__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .page-home .hero__geo--circle-1 {
+    width: 520px;
+    height: 520px;
+    top: -100px;
+    right: -60px;
+  }
+
+  .page-home .hero__geo--square-1 {
+    width: 260px;
+    height: 260px;
+    right: 15%;
+  }
+
+  .page-home .hero__geo--circle-2 {
+    width: 120px;
+    height: 120px;
+    right: 32%;
+  }
+
+  .page-home .hero__geo--dots {
+    width: 160px;
+    height: 160px;
+    right: 35%;
+  }
+
+  .page-home .hero__geo--line-1 {
+    width: 450px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-home .hero__content {
+    max-width: 800px;
+  }
+
+  .page-home .hero__subtitle {
+    font-size: 1.3rem;
+    max-width: 600px;
+  }
+
+  .page-home .hero__geo--circle-1 {
+    width: 600px;
+    height: 600px;
+    top: -140px;
+    right: -40px;
+    opacity: 0.07;
+  }
+
+  .page-home .hero__geo--square-1 {
+    width: 320px;
+    height: 320px;
+    right: 10%;
+    top: 30%;
+    opacity: 0.08;
+  }
+
+  .page-home .hero__geo--circle-2 {
+    width: 140px;
+    height: 140px;
+    bottom: 15%;
+    right: 25%;
+  }
+
+  .page-home .hero__geo--dots {
+    width: 200px;
+    height: 200px;
+    top: 18%;
+    right: 28%;
+    opacity: 0.08;
+  }
+
+  .page-home .hero__geo--line-1 {
+    width: 550px;
+    right: 2%;
+  }
+}
+
 
 /* === ABOUT PAGE === */
 /* Owned by: homepage teammate */
