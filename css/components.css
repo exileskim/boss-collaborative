@@ -526,16 +526,22 @@ body.nav-open {
 
 .logo-bar__item {
   flex-shrink: 0;
-  font-family: var(--font-heading);
-  font-size: var(--fs-body);
-  font-weight: var(--fw-semibold);
-  color: var(--text-primary);
   white-space: nowrap;
   filter: grayscale(1);
   opacity: 0.55;
   transition: filter var(--transition-base), opacity var(--transition-base);
   user-select: none;
-  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+}
+
+.logo-bar__item img {
+  height: 100%;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
 }
 
 .logo-bar__item:hover {
