@@ -18,6 +18,300 @@
 /* === SERVICES PAGE === */
 /* Owned by: services teammate */
 
+/* --- Services Hero --- */
+.page-services .services-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-services .services-hero__inner {
+  max-width: 720px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-services .services-hero__label {
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.page-services .services-hero__title {
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-bold);
+  line-height: 1.05;
+  margin-bottom: var(--space-md);
+}
+
+.page-services .services-hero__subtitle {
+  color: var(--text-secondary);
+  max-width: 60ch;
+}
+
+/* Decorative accent shape in hero */
+.page-services .services-hero__accent {
+  position: absolute;
+  top: -20%;
+  right: -5%;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%,
+    rgba(232, 87, 42, 0.08) 0%,
+    rgba(45, 90, 123, 0.05) 50%,
+    transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Service Blocks (alternating layout) --- */
+.page-services .service-block__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.page-services .service-block__number {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: var(--fw-bold);
+  color: var(--neutral-200);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.03em;
+}
+
+.page-services .service-block__title {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-md);
+  line-height: 1.15;
+}
+
+.page-services .service-block__desc {
+  color: var(--text-secondary);
+  font-size: var(--fs-body-lg);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+  max-width: 55ch;
+}
+
+.page-services .service-block__details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.page-services .service-block__detail h4 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.page-services .service-block__detail p {
+  color: var(--text-secondary);
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  max-width: 48ch;
+}
+
+/* --- Service Visual Placeholders --- */
+.page-services .service-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 400px;
+  margin-inline: auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-services .service-visual__label {
+  position: absolute;
+  bottom: var(--space-md);
+  left: var(--space-md);
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.04em;
+  color: var(--text-light);
+  opacity: 0.7;
+}
+
+/* Workshop visual: central circle with orbiting dots */
+.page-services .service-visual--workshop {
+  background: linear-gradient(145deg, var(--bg-dark) 0%, #252545 100%);
+}
+
+.page-services .service-visual__shape--circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  opacity: 0.9;
+}
+
+.page-services .service-visual__shape--ring {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid rgba(232, 87, 42, 0.25);
+}
+
+.page-services .service-visual__shape--dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent-tertiary);
+}
+
+.page-services .service-visual__shape--dot-1 { top: 22%; left: 50%; transform: translateX(-50%); }
+.page-services .service-visual__shape--dot-2 { top: 38%; right: 20%; }
+.page-services .service-visual__shape--dot-3 { bottom: 25%; right: 22%; }
+.page-services .service-visual__shape--dot-4 { bottom: 22%; left: 25%; }
+.page-services .service-visual__shape--dot-5 { top: 40%; left: 18%; }
+
+/* Strategy visual: ascending bars with trend line */
+.page-services .service-visual--strategy {
+  background: linear-gradient(145deg, var(--accent-secondary) 0%, #1e4560 100%);
+}
+
+.page-services .service-visual__shape--bar {
+  position: absolute;
+  bottom: 30%;
+  width: 48px;
+  border-radius: 4px 4px 0 0;
+  background: rgba(250, 250, 248, 0.2);
+}
+
+.page-services .service-visual__shape--bar-1 {
+  left: 25%;
+  height: 50px;
+}
+
+.page-services .service-visual__shape--bar-2 {
+  left: 45%;
+  height: 85px;
+  background: rgba(250, 250, 248, 0.35);
+}
+
+.page-services .service-visual__shape--bar-3 {
+  left: 65%;
+  height: 120px;
+  background: var(--accent-tertiary);
+  opacity: 0.8;
+}
+
+.page-services .service-visual__shape--line {
+  position: absolute;
+  bottom: 30%;
+  left: 20%;
+  width: 55%;
+  height: 2px;
+  background: rgba(250, 250, 248, 0.15);
+}
+
+/* Program visual: interconnected blocks */
+.page-services .service-visual--program {
+  background: linear-gradient(145deg, #3a2920 0%, var(--bg-dark) 100%);
+}
+
+.page-services .service-visual__shape--block {
+  position: absolute;
+  border-radius: var(--radius-md);
+}
+
+.page-services .service-visual__shape--block-1 {
+  width: 100px;
+  height: 100px;
+  background: var(--accent-primary);
+  opacity: 0.85;
+  top: 25%;
+  left: 20%;
+}
+
+.page-services .service-visual__shape--block-2 {
+  width: 80px;
+  height: 80px;
+  background: var(--accent-secondary);
+  opacity: 0.7;
+  top: 22%;
+  right: 22%;
+}
+
+.page-services .service-visual__shape--block-3 {
+  width: 90px;
+  height: 90px;
+  background: var(--accent-tertiary);
+  opacity: 0.65;
+  bottom: 22%;
+  left: 38%;
+}
+
+.page-services .service-visual__shape--connector {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  width: 30%;
+  height: 30%;
+  border: 2px dashed rgba(250, 250, 248, 0.15);
+  border-radius: var(--radius-sm);
+}
+
+/* --- Responsive: Tablet (768px+) --- */
+@media (min-width: 768px) {
+  .page-services .services-hero__accent {
+    width: 550px;
+    height: 550px;
+    right: -10%;
+    top: -30%;
+  }
+
+  .page-services .service-block__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+  }
+
+  /* Reversed: visual comes first in DOM order via CSS grid */
+  .page-services .service-block--reversed .service-block__grid {
+    direction: rtl;
+  }
+
+  .page-services .service-block--reversed .service-block__grid > * {
+    direction: ltr;
+  }
+
+  .page-services .service-block__details {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* --- Responsive: Desktop (1200px+) --- */
+@media (min-width: 1200px) {
+  .page-services .service-block__grid {
+    gap: var(--space-4xl);
+  }
+
+  .page-services .service-visual {
+    max-width: 460px;
+  }
+}
+
 
 /* === CONTACT PAGE === */
 /* Owned by: services teammate */
