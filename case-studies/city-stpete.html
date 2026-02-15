@@ -63,12 +63,12 @@
   <main>
 
     <!-- ============ HERO ============ -->
-    <section class="section section--alt">
-      <div class="container" data-animate="fade-up">
-        <a href="../case-studies.html" class="card__link" style="margin-bottom: var(--space-md); display: inline-flex;">&larr; Back to Case Studies</a>
+    <section class="cs-detail-hero">
+      <div class="container cs-detail-hero__container" data-animate="fade-up">
+        <a href="../case-studies.html" class="cs-detail-hero__back">&larr; Back to Case Studies</a>
         <span class="card__tag">Strategy &amp; Planning</span>
-        <h1 class="section-heading" style="margin-top: var(--space-sm);">City of St. Petersburg: Building Consensus for Growth</h1>
-        <p class="section-subheading">A series of facilitated strategic planning sessions that turned competing stakeholder priorities into a unified growth roadmap — adopted unanimously and built to last.</p>
+        <h1 class="cs-detail-hero__title">City of St. Petersburg: Building Consensus for Growth</h1>
+        <p class="cs-detail-hero__subtitle">A series of facilitated strategic planning sessions that turned competing stakeholder priorities into a unified growth roadmap — adopted unanimously and built to last.</p>
       </div>
     </section>
 
@@ -131,12 +131,30 @@
       </div>
     </section>
 
+    <!-- ============ NEXT/PREV NAVIGATION ============ -->
+    <section class="cs-nav">
+      <div class="container">
+        <div class="cs-nav__grid">
+          <a href="dali-innovation.html" class="cs-nav__item">
+            <span class="cs-nav__direction">&larr; Previous</span>
+            <span class="cs-nav__tag cs-nav__tag--dali">Program Design</span>
+            <span class="cs-nav__title">The Dali Museum: Reimagining Community Engagement</span>
+          </a>
+          <a href="nasa-workshop.html" class="cs-nav__item cs-nav__item--next">
+            <span class="cs-nav__direction">Next &rarr;</span>
+            <span class="cs-nav__tag cs-nav__tag--nasa">Workshop Facilitation</span>
+            <span class="cs-nav__title">NASA: Aligning 500+ Scientists Around a Shared Mission</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CTA ============ -->
     <section class="section section--accent" data-animate="fade-in">
       <div class="container text-center">
         <h2 class="section-heading">Need Help Building Consensus?</h2>
-        <p class="section-subheading" style="margin-inline: auto;">When stakeholders disagree, the answer isn't louder advocacy — it's better facilitation. Let's design a process that works for your community.</p>
-        <div class="flex-center flex-wrap" style="margin-top: var(--space-xl);">
+        <p class="section-subheading cta-subheading">When stakeholders disagree, the answer isn't louder advocacy — it's better facilitation. Let's design a process that works for your community.</p>
+        <div class="flex-center flex-wrap cta-actions">
           <a href="../contact.html" class="btn btn--light btn--large">Book a Discovery Call</a>
           <a href="../case-studies.html" class="btn btn--light">View More Case Studies</a>
         </div>

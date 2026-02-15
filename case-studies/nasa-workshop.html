@@ -63,12 +63,12 @@
   <main>
 
     <!-- ============ HERO ============ -->
-    <section class="section section--alt">
-      <div class="container" data-animate="fade-up">
-        <a href="../case-studies.html" class="card__link" style="margin-bottom: var(--space-md); display: inline-flex;">&larr; Back to Case Studies</a>
+    <section class="cs-detail-hero">
+      <div class="container cs-detail-hero__container" data-animate="fade-up">
+        <a href="../case-studies.html" class="cs-detail-hero__back">&larr; Back to Case Studies</a>
         <span class="card__tag">Workshop Facilitation</span>
-        <h1 class="section-heading" style="margin-top: var(--space-sm);">NASA: Aligning 500+ Scientists Around a Shared Mission</h1>
-        <p class="section-subheading">A multi-day collaborative workshop that transformed siloed research groups into a unified scientific community with shared frameworks and lasting cross-disciplinary partnerships.</p>
+        <h1 class="cs-detail-hero__title">NASA: Aligning 500+ Scientists Around a Shared Mission</h1>
+        <p class="cs-detail-hero__subtitle">A multi-day collaborative workshop that transformed siloed research groups into a unified scientific community with shared frameworks and lasting cross-disciplinary partnerships.</p>
       </div>
     </section>
 
@@ -129,12 +129,30 @@
       </div>
     </section>
 
+    <!-- ============ NEXT/PREV NAVIGATION ============ -->
+    <section class="cs-nav">
+      <div class="container">
+        <div class="cs-nav__grid">
+          <a href="city-stpete.html" class="cs-nav__item">
+            <span class="cs-nav__direction">&larr; Previous</span>
+            <span class="cs-nav__tag cs-nav__tag--stpete">Strategy &amp; Planning</span>
+            <span class="cs-nav__title">City of St. Petersburg: Building Consensus for Growth</span>
+          </a>
+          <a href="dali-innovation.html" class="cs-nav__item cs-nav__item--next">
+            <span class="cs-nav__direction">Next &rarr;</span>
+            <span class="cs-nav__tag cs-nav__tag--dali">Program Design</span>
+            <span class="cs-nav__title">The Dali Museum: Reimagining Community Engagement</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CTA ============ -->
     <section class="section section--accent" data-animate="fade-in">
       <div class="container text-center">
         <h2 class="section-heading">Facing a Similar Challenge?</h2>
-        <p class="section-subheading" style="margin-inline: auto;">Whether you're aligning 50 people or 500, we design facilitation experiences that turn complexity into collaboration.</p>
-        <div class="flex-center flex-wrap" style="margin-top: var(--space-xl);">
+        <p class="section-subheading cta-subheading">Whether you're aligning 50 people or 500, we design facilitation experiences that turn complexity into collaboration.</p>
+        <div class="flex-center flex-wrap cta-actions">
           <a href="../contact.html" class="btn btn--light btn--large">Book a Discovery Call</a>
           <a href="../case-studies.html" class="btn btn--light">View More Case Studies</a>
         </div>
