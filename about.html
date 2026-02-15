@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Boss Collaborative</title>
+  <meta name="description" content="Meet Annemarie Boss, founder of Boss Collaborative. Over a decade of experience designing and facilitating collaborative experiences for organizations like NASA, NIH, the Dali Museum, and more.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About — Boss Collaborative">
+  <meta property="og:description" content="Meet Annemarie Boss. Over a decade of experience in strategic facilitation, workshop design, and collaborative consulting.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.bosscollaborative.com/about.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Boss Collaborative">
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <!-- Scripts -->
+  <script src="js/nav.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</head>
+<body class="page-about">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="site-logo" aria-label="Boss Collaborative — Home">
+        <span>Boss</span> Collaborative
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="site-nav__list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link nav-link--active">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="nav-toggle__line"></span>
+        <span class="nav-toggle__line"></span>
+        <span class="nav-toggle__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav__backdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav__link mobile-nav__link--active">About</a></li>
+      <li><a href="services.html" class="mobile-nav__link">Services</a></li>
+      <li><a href="case-studies.html" class="mobile-nav__link">Case Studies</a></li>
+      <li><a href="blog.html" class="mobile-nav__link">Blog</a></li>
+      <li><a href="contact.html" class="mobile-nav__link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="header-spacer"></div>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="section section--lg about-hero" aria-labelledby="about-hero-heading">
+      <div class="container">
+        <div class="grid grid--2col about-hero__grid">
+          <div class="about-hero__text" data-animate="slide-left">
+            <p class="about-hero__label">The Founder</p>
+            <h1 class="about-hero__heading" id="about-hero-heading">Meet Annemarie Boss</h1>
+            <p class="about-hero__role">Founder & Principal Consultant</p>
+          </div>
+          <div class="about-hero__photo" data-animate="slide-right">
+            <div class="about-hero__photo-frame" aria-label="Annemarie Boss, Founder of Boss Collaborative">
+              <span class="about-hero__photo-initials" aria-hidden="true">AB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STORY ==================== -->
+    <section class="section about-story" aria-labelledby="about-story-heading">
+      <div class="container container--narrow">
+        <h2 class="visually-hidden" id="about-story-heading">Annemarie's Story</h2>
+
+        <div class="about-story__content" data-animate="fade-up">
+          <p class="text-lg">For over a decade, I have been designing and facilitating collaborative experiences for organizations navigating their most complex challenges. My work spans the intersection of science, government, education, and industry — from aligning hundreds of NASA researchers around shared objectives to reimagining community programs at the Dali Museum.</p>
+
+          <p>I founded Boss Collaborative on a core belief: that the biggest breakthroughs happen when diverse perspectives are brought together with intention, structure, and creative energy. Too often, organizations default to conventional meetings and top-down decision-making when what they actually need is facilitated collaboration — a structured space where every voice contributes to a shared outcome.</p>
+
+          <p>My approach draws from design thinking, systems theory, and creative facilitation methodologies. Whether I'm working with a team of 10 or a conference of 500+, the goal is the same: move people from complexity to clarity, from silos to shared understanding, and from ideas to action.</p>
+        </div>
+
+        <blockquote class="pull-quote about-story__quote" data-animate="fade-in">
+          I believe our most complex challenges deserve more than a meeting. They deserve a designed experience that draws out collective wisdom and turns it into forward motion.
+          <cite>Annemarie Boss</cite>
+        </blockquote>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="site-logo">
+            <span>Boss</span> Collaborative
+          </a>
+          <p>Designing and facilitating collaborative experiences that help teams navigate complexity, align strategy, and co-create solutions.</p>
+        </div>
+
+        <div class="footer__nav">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="about.html" class="footer__link">About</a></li>
+            <li><a href="services.html" class="footer__link">Services</a></li>
+            <li><a href="case-studies.html" class="footer__link">Case Studies</a></li>
+            <li><a href="blog.html" class="footer__link">Blog</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__contact">
+          <h4>Get in Touch</h4>
+          <a href="mailto:annemarie@bosscollaborative.com">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            annemarie@bosscollaborative.com
+          </a>
+          <a href="https://www.linkedin.com/in/annemarieboss1" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Boss Collaborative. All rights reserved.</p>
+        <p>St. Petersburg, Florida</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

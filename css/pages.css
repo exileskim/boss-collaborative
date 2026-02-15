@@ -359,6 +359,79 @@
 /* === ABOUT PAGE === */
 /* Owned by: homepage teammate */
 
+/* ---------- About Hero ---------- */
+.page-about .about-hero__grid {
+  align-items: center;
+}
+
+.page-about .about-hero__label {
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.page-about .about-hero__heading {
+  font-size: var(--fs-hero);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-sm);
+}
+
+.page-about .about-hero__role {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: var(--fs-body-lg);
+  color: var(--text-secondary);
+}
+
+.page-about .about-hero__photo-frame {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, var(--bg-secondary) 0%, var(--neutral-200) 60%, rgba(45, 90, 123, 0.08) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.page-about .about-hero__photo-initials {
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  font-weight: var(--fw-bold);
+  color: var(--neutral-300);
+  user-select: none;
+}
+
+/* ---------- About Story ---------- */
+.page-about .about-story__content p {
+  font-size: var(--fs-body-lg);
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+  max-width: none;
+}
+
+.page-about .about-story__content p:first-child {
+  color: var(--text-primary);
+}
+
+.page-about .about-story__content p:first-child::first-line {
+  font-weight: var(--fw-medium);
+}
+
+.page-about .about-story__quote {
+  margin-top: var(--space-2xl);
+}
+
 
 /* === SERVICES PAGE === */
 /* Owned by: services teammate */
@@ -757,6 +830,10 @@
   background-color: var(--bg-secondary);
 }
 
+.page-services .services-process__subheading {
+  margin-inline: auto;
+}
+
 .page-services .services-process__steps {
   display: flex;
   flex-direction: column;
@@ -957,6 +1034,12 @@
 
 .page-contact .contact-form__submit {
   margin-top: var(--space-lg);
+}
+
+.page-contact .contact-form__submit .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .page-contact .contact-form__success {
