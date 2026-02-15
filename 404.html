@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Boss Collaborative</title>
+  <meta name="description" content="The page you're looking for doesn't exist or has been moved. Let's get you back on track.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <style>
+    .error-section {
+      min-height: calc(100vh - 80px - 300px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding-block: var(--space-3xl);
+    }
+
+    /* Geometric decoration — floating shapes */
+    .error-section::before,
+    .error-section::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .error-section::before {
+      width: 340px;
+      height: 340px;
+      border: 2px solid var(--neutral-200);
+      top: -60px;
+      right: -80px;
+      opacity: 0.6;
+    }
+
+    .error-section::after {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(135deg, rgba(232, 87, 42, 0.06), rgba(212, 168, 83, 0.06));
+      bottom: -40px;
+      left: -50px;
+    }
+
+    .error-content {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      max-width: 540px;
+      padding-inline: var(--container-padding);
+    }
+
+    .error-code {
+      font-family: var(--font-heading);
+      font-size: clamp(6rem, 15vw, 10rem);
+      font-weight: var(--fw-bold);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      background: linear-gradient(
+        135deg,
+        var(--accent-primary) 0%,
+        var(--accent-tertiary) 50%,
+        var(--accent-secondary) 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: var(--space-sm);
+      user-select: none;
+    }
+
+    .error-heading {
+      font-family: var(--font-heading);
+      font-size: var(--fs-h2);
+      font-weight: var(--fw-bold);
+      color: var(--text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .error-text {
+      font-family: var(--font-accent);
+      font-style: italic;
+      font-size: var(--fs-body-lg);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 420px;
+      margin-inline: auto;
+      margin-bottom: var(--space-xl);
+    }
+
+    .error-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .error-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-xs) var(--space-md);
+      margin-top: var(--space-xs);
+    }
+
+    .error-nav a {
+      font-size: var(--fs-small);
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    .error-nav a:hover {
+      color: var(--accent-primary);
+    }
+
+    /* Decorative diamond shape */
+    .error-diamond {
+      width: 12px;
+      height: 12px;
+      background-color: var(--accent-tertiary);
+      transform: rotate(45deg);
+      margin: var(--space-lg) auto var(--space-xs);
+      opacity: 0.5;
+    }
+
+    @media (min-width: 768px) {
+      .error-section::before {
+        width: 500px;
+        height: 500px;
+        top: -120px;
+        right: -100px;
+      }
+
+      .error-section::after {
+        width: 300px;
+        height: 300px;
+        bottom: -80px;
+        left: -80px;
+      }
+
+      .error-links {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  </style>
+  <script src="js/nav.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="container flex-between">
+      <a href="index.html" class="site-logo"><span>Boss</span> Collaborative</a>
+      <nav class="site-nav">
+        <ul class="site-nav__list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle__line"></span>
+        <span class="nav-toggle__line"></span>
+        <span class="nav-toggle__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav__backdrop"></div>
+  <nav class="mobile-nav">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav__link">About</a></li>
+      <li><a href="services.html" class="mobile-nav__link">Services</a></li>
+      <li><a href="case-studies.html" class="mobile-nav__link">Case Studies</a></li>
+      <li><a href="blog.html" class="mobile-nav__link">Blog</a></li>
+      <li><a href="contact.html" class="mobile-nav__link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="header-spacer"></div>
+
+  <!-- 404 Content -->
+  <main>
+    <section class="error-section">
+      <div class="error-content" data-animate="fade-in">
+        <div class="error-code">404</div>
+        <h1 class="error-heading">Page Not Found</h1>
+        <p class="error-text">
+          The page you're looking for doesn't exist or has been moved.
+          Let's get you back to where the collaboration happens.
+        </p>
+        <div class="error-links">
+          <a href="index.html" class="btn btn--primary btn--large">Return Home</a>
+          <a href="contact.html" class="btn btn--secondary">Get in Touch</a>
+        </div>
+        <div class="error-diamond"></div>
+        <nav class="error-nav" aria-label="Quick links">
+          <a href="services.html">Services</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="blog.html">Blog</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="site-logo"><span>Boss</span> Collaborative</a>
+          <p>Creative collaboration for complex challenges. Strategic facilitation and workshop design for teams navigating complexity.</p>
+        </div>
+        <div class="footer__nav">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="about.html" class="footer__link">About</a></li>
+            <li><a href="services.html" class="footer__link">Services</a></li>
+            <li><a href="case-studies.html" class="footer__link">Case Studies</a></li>
+            <li><a href="blog.html" class="footer__link">Blog</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Connect</h4>
+          <a href="mailto:annemarie@bosscollaborative.com">annemarie@bosscollaborative.com</a>
+          <a href="https://linkedin.com/in/annemarieboss1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Boss Collaborative. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
