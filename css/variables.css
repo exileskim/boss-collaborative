@@ -1,0 +1,74 @@
+/* ============================================
+   BOSS COLLABORATIVE — Design Tokens
+   ============================================
+   All design decisions as CSS custom properties.
+   This file has zero specificity impact — tokens only.
+   ============================================ */
+
+:root {
+  /* ---------- Colors ---------- */
+  --bg-primary: #FAFAF8;
+  --bg-secondary: #F0EDE8;
+  --bg-dark: #1A1A2E;
+  --text-primary: #1A1A2E;
+  --text-secondary: #4A4A5A;
+  --text-light: #FAFAF8;
+  --accent-primary: #E8572A;
+  --accent-primary-hover: #D04A22;
+  --accent-secondary: #2D5A7B;
+  --accent-secondary-hover: #234B68;
+  --accent-tertiary: #D4A853;
+  --neutral-500: #6B7280;
+  --neutral-300: #D1D5DB;
+  --neutral-200: #E5E7EB;
+
+  /* ---------- Typography ---------- */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-accent: 'Playfair Display', serif;
+
+  --fs-hero: clamp(2.5rem, 5vw, 4.5rem);
+  --fs-h1: clamp(2rem, 4vw, 3.5rem);
+  --fs-h2: clamp(1.5rem, 3vw, 2.5rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.75rem);
+  --fs-body: 1rem;
+  --fs-body-lg: 1.125rem;
+  --fs-small: 0.875rem;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ---------- Spacing (8-point grid) ---------- */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 8rem;
+
+  /* ---------- Layout ---------- */
+  --container-max: 1200px;
+  --container-narrow: 800px;
+  --container-padding: 1.5rem;
+
+  /* ---------- Borders & Shadows ---------- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(26, 26, 46, 0.08);
+  --shadow-md: 0 4px 12px rgba(26, 26, 46, 0.1);
+  --shadow-lg: 0 8px 30px rgba(26, 26, 46, 0.12);
+
+  /* ---------- Transitions ---------- */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* ---------- Breakpoints (reference — used in media queries) ---------- */
+  /* --bp-tablet: 768px */
+  /* --bp-desktop: 1200px */
+}
