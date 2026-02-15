@@ -157,18 +157,13 @@
               <h3 class="contact-info__heading">Prefer to Talk?</h3>
               <p class="contact-info__desc">Skip the form. Schedule a free 20-minute discovery call and let's discuss your challenge directly.</p>
               <div class="contact-calendly">
-                <!-- Calendly inline widget placeholder -->
-                <div class="contact-calendly__placeholder">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-                    <rect x="4" y="4" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
-                    <line x1="4" y1="12" x2="28" y2="12" stroke="currentColor" stroke-width="2"/>
-                    <line x1="12" y1="4" x2="12" y2="12" stroke="currentColor" stroke-width="2"/>
-                    <line x1="20" y1="4" x2="20" y2="12" stroke="currentColor" stroke-width="2"/>
-                    <circle cx="16" cy="20" r="3" fill="currentColor"/>
-                  </svg>
-                  <p>Calendly scheduling widget loads here</p>
-                  <a href="https://calendly.com/annemarie-bosscollaborative/discovery" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Book a Discovery Call</a>
-                </div>
+                <!-- Calendly inline widget -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/annemarie-bosscollaborative/discovery" style="min-width:280px;min-height:630px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Fallback link if widget doesn't load -->
+                <noscript>
+                  <a href="https://calendly.com/annemarie-bosscollaborative/discovery" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Book a Discovery Call on Calendly</a>
+                </noscript>
               </div>
             </div>
 
@@ -209,6 +204,52 @@
       </div>
     </div>
   </footer>
+
+  <!-- Contact Form Submission Handler -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.querySelector('.contact-form');
+      if (!form) return;
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var submitBtn = form.querySelector('button[type="submit"]');
+        var successMsg = form.querySelector('.contact-form__success');
+        var originalText = submitBtn.innerHTML;
+
+        // Disable button to prevent double-submit
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending&hellip;';
+
+        // Submit via fetch to Formspree
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+          if (response.ok) {
+            form.reset();
+            successMsg.hidden = false;
+            submitBtn.innerHTML = 'Sent!';
+            // Re-enable after delay
+            setTimeout(function() {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalText;
+            }, 3000);
+          } else {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+            alert('Something went wrong. Please try again or email us directly.');
+          }
+        }).catch(function() {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+          alert('Something went wrong. Please try again or email us directly.');
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
