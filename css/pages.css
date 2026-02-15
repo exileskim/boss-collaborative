@@ -492,6 +492,176 @@
   border-radius: var(--radius-sm);
 }
 
+/* Innovation visual: radiating sparks from central bulb */
+.page-services .service-visual--innovation {
+  background: linear-gradient(145deg, #2e1a3e 0%, var(--bg-dark) 100%);
+}
+
+.page-services .service-visual__shape--bulb {
+  width: 60px;
+  height: 80px;
+  border-radius: 50% 50% 20% 20%;
+  background: var(--accent-tertiary);
+  opacity: 0.85;
+}
+
+.page-services .service-visual__shape--spark {
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent-primary);
+  opacity: 0.5;
+}
+
+.page-services .service-visual__shape--spark-1 {
+  top: 28%;
+  left: 25%;
+  transform: rotate(-30deg);
+}
+
+.page-services .service-visual__shape--spark-2 {
+  top: 22%;
+  right: 25%;
+  transform: rotate(30deg);
+}
+
+.page-services .service-visual__shape--spark-3 {
+  top: 15%;
+  left: 45%;
+  transform: rotate(0deg);
+  width: 30px;
+}
+
+/* Offsites visual: interconnected hexagons */
+.page-services .service-visual--offsites {
+  background: linear-gradient(145deg, #1a3a2e 0%, var(--bg-dark) 100%);
+}
+
+.page-services .service-visual__shape--hexagon {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.page-services .service-visual__shape--hex-1 {
+  background: var(--accent-secondary);
+  opacity: 0.7;
+  top: 25%;
+  left: 28%;
+}
+
+.page-services .service-visual__shape--hex-2 {
+  background: var(--accent-primary);
+  opacity: 0.5;
+  top: 25%;
+  right: 28%;
+}
+
+.page-services .service-visual__shape--hex-3 {
+  background: var(--accent-tertiary);
+  opacity: 0.6;
+  bottom: 22%;
+  left: 38%;
+  width: 80px;
+  height: 80px;
+}
+
+/* Custom visual: interlocking puzzle pieces */
+.page-services .service-visual--custom {
+  background: linear-gradient(145deg, var(--bg-dark) 0%, #252535 100%);
+}
+
+.page-services .service-visual__shape--puzzle {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: var(--radius-sm);
+}
+
+.page-services .service-visual__shape--puzzle-1 {
+  background: var(--accent-primary);
+  opacity: 0.75;
+  top: 28%;
+  left: 25%;
+}
+
+.page-services .service-visual__shape--puzzle-2 {
+  background: var(--accent-secondary);
+  opacity: 0.65;
+  top: 28%;
+  right: 28%;
+  border-radius: var(--radius-md);
+}
+
+.page-services .service-visual__shape--puzzle-3 {
+  background: var(--accent-tertiary);
+  opacity: 0.6;
+  bottom: 25%;
+  left: 30%;
+  border-radius: 50%;
+}
+
+.page-services .service-visual__shape--puzzle-4 {
+  background: var(--neutral-500);
+  opacity: 0.35;
+  bottom: 25%;
+  right: 25%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* --- Process Overview --- */
+.page-services .services-process {
+  background-color: var(--bg-secondary);
+}
+
+.page-services .services-process__steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-2xl);
+}
+
+.page-services .services-process__step {
+  text-align: center;
+  max-width: 240px;
+}
+
+.page-services .services-process__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  margin-bottom: var(--space-sm);
+  color: var(--accent-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.page-services .services-process__step-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-xs);
+}
+
+.page-services .services-process__step-desc {
+  font-size: var(--fs-small);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: none;
+}
+
+.page-services .services-process__connector {
+  color: var(--neutral-300);
+  transform: rotate(90deg);
+}
+
 /* --- Responsive: Tablet (768px+) --- */
 @media (min-width: 768px) {
   .page-services .services-hero__accent {
@@ -518,6 +688,19 @@
   .page-services .service-block__details {
     grid-template-columns: 1fr 1fr;
   }
+
+  .page-services .services-process__steps {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .page-services .services-process__connector {
+    transform: none;
+    margin-top: var(--space-lg);
+    flex-shrink: 0;
+  }
 }
 
 /* --- Responsive: Desktop (1200px+) --- */
@@ -528,6 +711,10 @@
 
   .page-services .service-visual {
     max-width: 460px;
+  }
+
+  .page-services .services-process__step {
+    max-width: 200px;
   }
 }
 
