@@ -229,6 +229,56 @@
   }
 }
 
+/* ---------- Featured Case Study ---------- */
+.page-home .featured-case-study__inner {
+  max-width: 720px;
+}
+
+.page-home .featured-case-study__label {
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-tertiary);
+  margin-bottom: var(--space-sm);
+}
+
+.page-home .featured-case-study__heading {
+  font-size: var(--fs-h2);
+  color: var(--text-light);
+  margin-bottom: var(--space-lg);
+}
+
+.page-home .pull-quote--light {
+  color: rgba(250, 250, 248, 0.85);
+  border-left-color: var(--accent-tertiary);
+}
+
+.page-home .pull-quote--light cite {
+  color: rgba(250, 250, 248, 0.5);
+}
+
+.page-home .featured-case-study__stat {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.page-home .featured-case-study__stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: var(--fw-bold);
+  color: var(--accent-primary);
+  line-height: 1;
+}
+
+.page-home .featured-case-study__stat-label {
+  font-size: var(--fs-body-lg);
+  color: rgba(250, 250, 248, 0.7);
+}
+
 
 /* === ABOUT PAGE === */
 /* Owned by: homepage teammate */
