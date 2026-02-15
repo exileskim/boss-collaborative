@@ -1058,6 +1058,93 @@
 /* === CASE STUDIES === */
 /* Owned by: content teammate */
 
+/* --- Case Study Stats Grid --- */
+.page-case-studies .case-study__stats {
+  text-align: center;
+}
+
+.page-case-studies .case-study__stat {
+  padding: var(--space-lg) var(--space-sm);
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.page-case-studies .case-study__stat-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: var(--fw-bold);
+  color: var(--accent-primary);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.page-case-studies .case-study__stat-label {
+  display: block;
+  font-size: var(--fs-small);
+  color: var(--text-secondary);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.02em;
+}
+
+/* --- Case Study Detail Article --- */
+.page-case-studies article h2 {
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--neutral-200);
+}
+
+.page-case-studies article h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* --- Responsive: Tablet (768px+) --- */
+@media (min-width: 768px) {
+  .page-case-studies .case-study__stat {
+    border-bottom: none;
+    border-right: 1px solid var(--neutral-200);
+  }
+
+  .page-case-studies .case-study__stat:last-child {
+    border-right: none;
+  }
+}
+
 
 /* === BLOG === */
 /* Owned by: content teammate */
+
+/* --- Blog Card Meta (date) --- */
+.page-blog .blog-card__meta {
+  font-size: var(--fs-small);
+  color: var(--neutral-500);
+  margin-bottom: var(--space-sm);
+}
+
+/* --- Blog Post Detail --- */
+.page-blog .blog-post__meta {
+  font-size: var(--fs-small);
+  color: var(--neutral-500);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-2xl);
+}
+
+.page-blog .blog-post__content h2 {
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+}
+
+.page-blog .blog-post__content p {
+  margin-bottom: var(--space-md);
+  line-height: 1.75;
+}
+
+.page-blog .blog-post__content p:last-child {
+  margin-bottom: 0;
+}
+
+.page-blog .blog-post__content p strong {
+  color: var(--text-primary);
+  font-weight: var(--fw-semibold);
+}
